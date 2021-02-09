@@ -16,7 +16,7 @@ def start(bot, update):
 def echo(bot, update):
     r = requests.get("https://api.wolframalpha.com/v2/query", {
         'input': update.message.text,
-        'appid': 'WOLFRAMALPHA-APPID-HERE'
+        'appid': 'PTPGQT-J44KQYPHA2'
     })
 
     e = xml.etree.ElementTree.fromstring(r.text.encode('utf-8').strip())
@@ -30,7 +30,7 @@ def echo(bot, update):
 
     bot.send_message(chat_id=update.message.chat_id, text="\n\n".join(result))
 
-updater = Updater(token='TELEGRAM-BOT-TOKEN-HERE')
+updater = Updater(token='1622377611:AAHvYBIGyqoRikz7-nqmkyXWJAJWsIjjd8Y')
 dispatcher = updater.dispatcher
 
 # Handle /start
